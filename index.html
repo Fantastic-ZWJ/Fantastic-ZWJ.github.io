@@ -6,22 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fantastic-ZWJ</title>
     <style>
-        #title{
+        body{
+            /* background-color: #ebf0ec; */
+        }
+        #content{
             display: flex;
             flex-direction: column;
             align-items: center;
             
         }
-        #title span{
-            font-size: 26px;
-            padding-top: 100px;
+        .top{
+            display: flex;
+            flex-direction: column;
+        }
+        .show1{
+            animation-name: show1;
+            animation-duration: 1.2s;
+            animation-timing-function: ease;
+            padding-bottom: 10px;
+        }
+        .show2{
+            animation-name: show2;
+            animation-duration: 1.7s;
+            animation-timing-function: ease;
+        }
+        .list{
+            margin-top: 100px;
+        }
+        table{
+            border-collapse: collapse;
+
+            animation-name: show3;
+            animation-duration: 2s;
+            /* animation-timing-function: ease; */
+        }
+        th,td{
+            padding: 5px 20px;
+            border-bottom: 1px solid #999;
+            text-align: center;
+        }
+        @keyframes show1 {
+            0% {font-size: 20px;margin-top: 200px; opacity: 0;}
+            20% {font-size: 60px;}
+            40% {font-size: 40px;margin-top: 200px;}
+            70% {font-size: 40px;margin-top: 200px;opacity: 1;}
+            100% {margin-top: 0px;}
+        }
+        @keyframes show2 {
+            0% {margin-top: -200px;opacity: -10;}
+            100% {margin-top: 0px;opacity: 1;}
+        }
+        @keyframes show3 {
+            0% {margin-top: 500px;opacity: -10;}
+            100% {margin-top: 0px;opacity: 1;}
         }
     </style>
 </head>
 <body>
-    <div id="title">
-        <span>您好，欢迎来到张伟嘉的页面！</span>
-        <a href="https://fantastic-zwj.github.io/uniappDemo-news">uniappDemo-news</a>
+    <div id="content">
+        <div class="top">
+            <span class="show1" style="font-size: 40px;">Welcome!</span>
+            <span class="show2" style="font-size: 26px;">欢迎来到张伟嘉的页面！</span>
+        </div>
+        <hr>
+        <div class="list">
+            <table>
+                <thead>
+                    <th>DEMO</th>
+                    <th>PAGE</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            贪吃蛇
+                        </td>
+                        <td>
+                            <a href="./贪吃蛇.html">Go</a></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            uniappDemo-news
+                        </td>
+                        <td>
+                            <a href="https://fantastic-zwj.github.io/uniappDemo-news">Go</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
     </div>
 </body>
 </html>
