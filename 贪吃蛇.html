@@ -228,6 +228,7 @@
             for(let i = 0; i<snakes.length-1;i++){
                 if(snakes[i].offsetLeft === x && snakes[i].offsetTop === y){
                     alert("你吃到自己了！Over了！")
+                    location.reload()
                     return
                 }
             }
